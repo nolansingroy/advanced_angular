@@ -10,11 +10,11 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
-  { path: '', 
-    component: HomePageComponent 
+  { path: '',
+    component: HomePageComponent
   },
-  { path: 'search',      
-    redirectTo: '/search/angular', 
+  { path: 'search',
+    redirectTo: '/search/angular',
     pathMatch: 'full' },
   {
     path: 'search/:query',
@@ -37,7 +37,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
+    ReactiveFormsModule
   ],
   providers: [GitSearchService],
   bootstrap: [AppComponent]
